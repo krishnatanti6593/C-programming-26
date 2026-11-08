@@ -1,0 +1,28 @@
+
+#include <stdio.h>
+#include <string.h>
+
+void checkPassword(char password[]) {
+    int len = strlen(password);
+
+    if (len >= 8) {
+        printf("Strong Password");
+    }
+    else if (len >= 5) {
+        printf("Medium Password");
+    }
+    else {
+        printf("Weak Password");
+    }
+}
+
+int main() {
+    char password[100];
+
+    printf("Enter password: ");
+    scanf("%s", password);
+
+    checkPassword(password);
+
+    return 0;
+}
